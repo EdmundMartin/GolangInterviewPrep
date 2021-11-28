@@ -11,8 +11,7 @@ func sortString(target string) string {
 	return strings.Join(chars, "")
 }
 
-
-func PermutationSort(first, second string) bool  {
+func PermutationSort(first, second string) bool {
 	if len(first) != len(second) {
 		return false
 	}

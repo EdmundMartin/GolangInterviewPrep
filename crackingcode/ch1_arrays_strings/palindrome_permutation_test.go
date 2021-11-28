@@ -12,7 +12,6 @@ func TestPalindromePermutationHashTable(t *testing.T) {
 	}
 }
 
-
 func TestPalindromePermutationOptimised(t *testing.T) {
 	if PalindromePermutationOptimised("tact coa") != true {
 		t.Error("Expected true, got false")

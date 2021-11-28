@@ -17,7 +17,6 @@ func TestIsUnique(t *testing.T) {
 	}
 }
 
-
 func TestBlah(t *testing.T) {
 	value := "h o"
 	for _, r := range value {

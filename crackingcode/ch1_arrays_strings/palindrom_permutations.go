@@ -20,7 +20,7 @@ func buildFreqTable(phrase string) map[int]int {
 func checkMaxOneOdd(counter map[int]int) bool {
 	foundOdd := false
 	for _, v := range counter {
-		if v % 2 == 1 {
+		if v%2 == 1 {
 			if foundOdd {
 				return false
 			}
@@ -34,7 +34,6 @@ func PalindromePermutationHashTable(phrase string) bool {
 	counter := buildFreqTable(phrase)
 	return checkMaxOneOdd(counter)
 }
-
 
 func getCharValue(r rune) int {
 	a := int('a')
@@ -54,7 +53,7 @@ func PalindromePermutationOptimised(phrase string) bool {
 		val := getCharValue(char)
 		if val != -1 {
 			table[val]++
-			if table[val] % 2 == 1 {
+			if table[val]%2 == 1 {
 				countOdd++
 			} else {
 				countOdd--

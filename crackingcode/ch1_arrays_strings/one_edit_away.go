@@ -32,9 +32,9 @@ func oneEditInsert(first, second string) bool {
 func OneEditAway(first string, second string) bool {
 	if len(first) == len(second) {
 		return oneEditReplace(first, second)
-	} else if len(first) + 1 == len(second) {
+	} else if len(first)+1 == len(second) {
 		return oneEditInsert(first, second)
-	} else if len(first) - 1 == len(second) {
+	} else if len(first)-1 == len(second) {
 		return oneEditInsert(second, first)
 	}
 	return false

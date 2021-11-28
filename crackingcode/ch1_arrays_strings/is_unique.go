@@ -8,7 +8,6 @@ It's okay to assume 256 characters. This would be the case in extended ASCII. Yo
 with your interview.
 */
 
-
 func IsUnique(target string) bool {
 	if len(target) > 128 {
 		return false
