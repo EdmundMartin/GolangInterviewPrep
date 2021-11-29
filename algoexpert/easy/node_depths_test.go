@@ -3,7 +3,7 @@ package easy
 import "testing"
 
 func TestNodeDepths(t *testing.T) {
-	root := &BinaryNode{Value: 10 }
+	root := &BinaryNode{Value: 10}
 	root.Left = &BinaryNode{Value: 9}
 	root.Right = &BinaryNode{Value: 11}
 	root.Left.Left = &BinaryNode{Value: 8}

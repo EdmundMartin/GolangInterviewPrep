@@ -2,7 +2,7 @@ package easy
 
 type BinaryNode struct {
 	Value int
-	Left *BinaryNode
+	Left  *BinaryNode
 	Right *BinaryNode
 }
 
@@ -18,12 +18,11 @@ func abs(x int) int {
 }
 
 func findClosest(target, old, new int) int {
-	if abs(target - old) < abs(target - new) {
+	if abs(target-old) < abs(target-new) {
 		return old
 	}
 	return new
 }
-
 
 func FindClosestValue(root *BinaryNode, target int) int {
 	closest := root.Value

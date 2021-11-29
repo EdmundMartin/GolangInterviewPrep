@@ -1,8 +1,20 @@
 package ch2_linked_lists
 
+import "fmt"
+
 type SinglyLinkedNode struct {
 	Value int
 	Next  *SinglyLinkedNode
+}
+
+func (s *SinglyLinkedNode) String() string {
+	var vals []int
+	node := s
+	for node != nil {
+		vals = append(vals, node.Value)
+		node = node.Next
+	}
+	return fmt.Sprintf("%v", vals)
 }
 
 func LinkedListToSlice(head *SinglyLinkedNode) []int {

@@ -15,7 +15,6 @@ func SliceToLinkedList(values []int) *LinkedList {
 	return dummyHead.Next
 }
 
-
 func LinkedListToSlice(head *LinkedList) []int {
 	var values []int
 	for head != nil {
@@ -24,7 +23,6 @@ func LinkedListToSlice(head *LinkedList) []int {
 	}
 	return values
 }
-
 
 func TestRemoveDuplicatesFromLinkedList(t *testing.T) {
 	testList := SliceToLinkedList([]int{1, 2, 3, 4, 4, 5, 5, 6, 6, 8, 9})

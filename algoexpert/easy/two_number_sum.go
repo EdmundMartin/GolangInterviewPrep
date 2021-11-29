@@ -1,6 +1,5 @@
 package easy
 
-
 func TwoSum(array []int, targetSum int) []int {
 	seen := make(map[int]interface{})
 	for _, num := range array {

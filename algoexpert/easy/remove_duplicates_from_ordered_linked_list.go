@@ -2,9 +2,8 @@ package easy
 
 type LinkedList struct {
 	Value int
-	Next *LinkedList
+	Next  *LinkedList
 }
-
 
 func RemoveDuplicatesFromLinkedList(head *LinkedList) *LinkedList {
 	var prev *LinkedList = nil

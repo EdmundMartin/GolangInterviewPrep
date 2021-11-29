@@ -13,7 +13,6 @@ func branchSumHelper(node *BinaryNode, runningSum int, sums *[]int) {
 	branchSumHelper(node.Right, newSum, sums)
 }
 
-
 func BranchSum(root *BinaryNode) []int {
 	var sums []int
 	branchSumHelper(root, 0, &sums)
