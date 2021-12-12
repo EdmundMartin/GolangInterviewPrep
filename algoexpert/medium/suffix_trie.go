@@ -7,7 +7,6 @@ func NewSuffixTrie() SuffixTrie {
 	return trie
 }
 
-
 func (trie SuffixTrie) PopulateSuffixTrieFrom(str string) {
 	for idx := range str {
 		node := trie

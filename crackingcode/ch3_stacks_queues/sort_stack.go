@@ -26,8 +26,6 @@ func (s *SimpleStack) Length() int {
 	return len(s.Stack)
 }
 
-
-
 func SortStack(stack *SimpleStack) *SimpleStack {
 	replacement := NewSimpleStack()
 	for stack.Length() > 0 {

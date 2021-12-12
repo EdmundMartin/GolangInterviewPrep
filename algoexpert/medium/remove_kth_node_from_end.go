@@ -2,7 +2,7 @@ package medium
 
 type LinkedList struct {
 	Value int
-	Next *LinkedList
+	Next  *LinkedList
 }
 
 func SliceToLinkedList(values []int) *LinkedList {

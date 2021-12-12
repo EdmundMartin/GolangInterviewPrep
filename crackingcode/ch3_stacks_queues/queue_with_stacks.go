@@ -25,7 +25,7 @@ func (m *MyQueue) Peek() (int, error) {
 	if len(m.oldest) == 0 {
 		return 0, errors.New("empty stack")
 	}
-	return m.oldest[len(m.oldest) - 1], nil
+	return m.oldest[len(m.oldest)-1], nil
 }
 
 func (m *MyQueue) Pop() (int, error) {

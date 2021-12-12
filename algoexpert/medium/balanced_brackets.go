@@ -23,9 +23,9 @@ func BalancedBrackets(input string) bool {
 	openingSet := NewSimpleStringSet("(", "{", "[")
 	closingSet := NewSimpleStringSet(")", "}", "]")
 	matchingBrackets := map[string]string{
-		"}":"{",
-		")":"(",
-		"]":"[",
+		"}": "{",
+		")": "(",
+		"]": "[",
 	}
 	var stack []string
 	for _, char := range strings.Split(input, "") {
@@ -36,8 +36,8 @@ func BalancedBrackets(input string) bool {
 				return false
 			}
 			val, _ := matchingBrackets[char]
-			if stack[len(stack) - 1] == val {
-				stack = stack[:len(stack) - 1]
+			if stack[len(stack)-1] == val {
+				stack = stack[:len(stack)-1]
 			} else {
 				return false
 			}

@@ -1,6 +1,5 @@
 package easy
 
-
 func IsPalindrome(target string) bool {
 	backIdx := len(target) - 1
 

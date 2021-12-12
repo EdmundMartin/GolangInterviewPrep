@@ -8,7 +8,7 @@ func isLetter(c rune) bool {
 
 func IsPalindromePunctuation(s string) bool {
 	s = strings.ToLower(s)
-	i, j := 0, len(s) - 1
+	i, j := 0, len(s)-1
 	for i < j {
 		for !isLetter(rune(s[i])) && i < j {
 			i++

@@ -9,7 +9,7 @@ type MinMax struct {
 
 type MinMaxStack struct {
 	StackMinMax []MinMax
-	Stack []int
+	Stack       []int
 }
 
 func NewMinMaxStack() *MinMaxStack {
@@ -38,13 +38,13 @@ func MaxInt(a, b int) int {
 }
 
 func (m *MinMaxStack) Peek() int {
-	return m.Stack[len(m.Stack) - 1]
+	return m.Stack[len(m.Stack)-1]
 }
 
 func (m *MinMaxStack) Pop() int {
 	var x int
-	x, m.Stack = m.Stack[len(m.Stack) - 1], m.Stack[:len(m.Stack) - 1]
-	m.StackMinMax = m.StackMinMax[:len(m.StackMinMax) - 1]
+	x, m.Stack = m.Stack[len(m.Stack)-1], m.Stack[:len(m.Stack)-1]
+	m.StackMinMax = m.StackMinMax[:len(m.StackMinMax)-1]
 	return x
 }
 
@@ -54,7 +54,7 @@ func (m *MinMaxStack) Push(value int) {
 		Max: value,
 	}
 	if len(m.StackMinMax) > 0 {
-		lastMinMax := m.StackMinMax[len(m.StackMinMax) - 1]
+		lastMinMax := m.StackMinMax[len(m.StackMinMax)-1]
 		newMinMax.Min = MinInt(lastMinMax.Min, newMinMax.Min)
 		newMinMax.Max = MaxInt(lastMinMax.Max, newMinMax.Max)
 	}
@@ -63,9 +63,9 @@ func (m *MinMaxStack) Push(value int) {
 }
 
 func (m *MinMaxStack) GetMin() int {
-	return m.StackMinMax[len(m.StackMinMax) - 1].Min
+	return m.StackMinMax[len(m.StackMinMax)-1].Min
 }
 
 func (m *MinMaxStack) GetMax() int {
-	return m.StackMinMax[len(m.StackMinMax) - 1].Max
+	return m.StackMinMax[len(m.StackMinMax)-1].Max
 }

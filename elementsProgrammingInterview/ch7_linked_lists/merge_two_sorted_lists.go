@@ -1,6 +1,6 @@
 package ch7_linked_lists
 
-func MergeTwoSortedLists(l1 *ListNode, l2 *ListNode) *ListNode  {
+func MergeTwoSortedLists(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	dummyHead := &ListNode{
 		Data: 0,

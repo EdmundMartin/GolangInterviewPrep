@@ -1,6 +1,5 @@
 package easy
 
-
 func reverseResult(result int) int {
 	if result == 1 {
 		return 0

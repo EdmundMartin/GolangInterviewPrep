@@ -10,10 +10,9 @@ func ReverseRange(contents *[]string, start, end int) {
 	}
 }
 
-
 func ReverseWordsInString(value string) string {
 	characters := strings.Split(value, "")
-	ReverseRange(&characters, 0, len(characters) - 1)
+	ReverseRange(&characters, 0, len(characters)-1)
 
 	startIdx := 0
 	for startIdx < len(characters) {
@@ -21,7 +20,7 @@ func ReverseWordsInString(value string) string {
 		for endIdx < len(characters) && characters[endIdx] != " " {
 			endIdx++
 		}
-		ReverseRange(&characters, startIdx, endIdx - 1)
+		ReverseRange(&characters, startIdx, endIdx-1)
 		startIdx = endIdx + 1
 	}
 

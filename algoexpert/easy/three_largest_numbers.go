@@ -2,7 +2,7 @@ package easy
 
 import "math"
 
-func ThreeLargestNumbers(array []int) []int  {
+func ThreeLargestNumbers(array []int) []int {
 	first := math.MinInt32
 	second := math.MinInt32
 	third := math.MinInt32

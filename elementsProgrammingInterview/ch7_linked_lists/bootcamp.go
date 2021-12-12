@@ -5,7 +5,6 @@ type ListNode struct {
 	Next *ListNode
 }
 
-
 func SearchInList(l *ListNode, key int) *ListNode {
 	for l != nil && l.Data != key {
 		l = l.Next
@@ -13,7 +12,7 @@ func SearchInList(l *ListNode, key int) *ListNode {
 	return l
 }
 
-func InsertAfter(node *ListNode, newNode *ListNode)  {
+func InsertAfter(node *ListNode, newNode *ListNode) {
 	newNode.Next = node.Next
 	node.Next = newNode
 }

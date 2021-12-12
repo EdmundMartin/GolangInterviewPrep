@@ -1,6 +1,5 @@
 package easy
 
-
 func GenerateDocument(characters, document string) bool {
 	charMap := make(map[rune]int)
 	for _, char := range characters {

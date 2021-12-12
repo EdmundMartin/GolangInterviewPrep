@@ -53,7 +53,6 @@ func getTailAndSize(node *SinglyLinkedNode) TailResult {
 	}
 }
 
-
 func getKthNode(node *SinglyLinkedNode, k int) *SinglyLinkedNode {
 	current := node
 	for k > 0 && current != nil {

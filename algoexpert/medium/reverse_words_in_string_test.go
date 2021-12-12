@@ -7,12 +7,11 @@ import (
 
 func TestReverseRange(t *testing.T) {
 	test := []string{"h", "e", "l", "l", "o"}
-	ReverseRange(&test, 0, len(test) - 1)
+	ReverseRange(&test, 0, len(test)-1)
 	if !reflect.DeepEqual(test, []string{"o", "l", "l", "e", "h"}) {
 		t.Error("Reverse did not work")
 	}
 }
-
 
 func TestReverseWordsInString(t *testing.T) {
 	result := ReverseWordsInString("edmund is the best")

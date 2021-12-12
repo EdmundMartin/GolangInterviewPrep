@@ -1,7 +1,5 @@
 package ch2_linked_lists
 
-
-
 func FindBeginning(head *SinglyLinkedNode) *SinglyLinkedNode {
 	slow := head
 	fast := head

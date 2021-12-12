@@ -14,7 +14,7 @@ func MinInt(a, b int) int {
 
 type Placeholder struct {
 	Value int
-	Min int
+	Min   int
 }
 
 type StackWithMin struct {
@@ -27,12 +27,12 @@ func NewStackWithMin() *StackWithMin {
 	}
 }
 
-func (s *StackWithMin) Push(value int)  {
+func (s *StackWithMin) Push(value int) {
 	var oldMin int
 	if len(s.stack) == 0 {
 		oldMin = math.MaxInt32
 	} else {
-		oldMin = s.stack[len(s.stack) - 1].Min
+		oldMin = s.stack[len(s.stack)-1].Min
 	}
 	s.stack = append(s.stack, Placeholder{
 		Value: value,
@@ -40,7 +40,7 @@ func (s *StackWithMin) Push(value int)  {
 	})
 }
 
-func (s *StackWithMin) Pop() (int, error)  {
+func (s *StackWithMin) Pop() (int, error) {
 	if len(s.stack) == 0 {
 		return 0, errors.New("stack is empty")
 	}

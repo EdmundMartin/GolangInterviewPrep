@@ -1,11 +1,9 @@
 package ch2_linked_lists
 
-
 func IsPalindrome(head *SinglyLinkedNode) bool {
 	reversed := reverseAndClone(head)
 	return areEqualLists(head, reversed)
 }
-
 
 func reverseAndClone(node *SinglyLinkedNode) *SinglyLinkedNode {
 	var head *SinglyLinkedNode

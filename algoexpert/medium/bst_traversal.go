@@ -1,12 +1,10 @@
 package medium
 
-
 type BinaryTreeNode struct {
 	Value int
-	Left *BinaryTreeNode
+	Left  *BinaryTreeNode
 	Right *BinaryTreeNode
 }
-
 
 func InOrder(node *BinaryTreeNode, array *[]int) *[]int {
 	if node != nil {
@@ -26,7 +24,7 @@ func PreOrder(node *BinaryTreeNode, array *[]int) *[]int {
 	return array
 }
 
-func PostOrder(node *BinaryTreeNode, array *[]int) *[]int  {
+func PostOrder(node *BinaryTreeNode, array *[]int) *[]int {
 	if node != nil {
 		PostOrder(node.Left, array)
 		PostOrder(node.Right, array)

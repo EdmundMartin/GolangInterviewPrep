@@ -1,6 +1,5 @@
 package easy
 
-
 func IsValidSubsequence(array []int, sequence []int) bool {
 	if len(sequence) > len(array) {
 		return false

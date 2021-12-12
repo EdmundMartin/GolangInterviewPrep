@@ -7,7 +7,6 @@ import (
 	"strings"
 )
 
-
 func isInt(s string) bool {
 	_, err := strconv.Atoi(s)
 	return err == nil
@@ -27,8 +26,8 @@ func EncodingRunLength(s string) string {
 	asSlice := strings.Split(s, "")
 
 	for i := 1; i < len(s); i++ {
-		if i == len(s) || asSlice[i] != asSlice[i - 1] {
-			buffer.WriteString(fmt.Sprintf("%d%s", count, asSlice[i - 1]))
+		if i == len(s) || asSlice[i] != asSlice[i-1] {
+			buffer.WriteString(fmt.Sprintf("%d%s", count, asSlice[i-1]))
 			count = 1
 		} else {
 			count++
@@ -36,7 +35,6 @@ func EncodingRunLength(s string) string {
 	}
 	return buffer.String()
 }
-
 
 func DecodingRunLength(s string) string {
 	count := 0

@@ -6,14 +6,14 @@ const numberStacks = 3
 
 type FixedMultiStack struct {
 	stackCapacity int
-	values []int
-	sizes []int
+	values        []int
+	sizes         []int
 }
 
 func NewFixedMultiStack(stackSize int) *FixedMultiStack {
 	return &FixedMultiStack{
 		stackCapacity: stackSize,
-		values:        make([]int, stackSize * numberStacks),
+		values:        make([]int, stackSize*numberStacks),
 		sizes:         make([]int, numberStacks),
 	}
 }
@@ -45,7 +45,6 @@ func (f *FixedMultiStack) Peek(stackNumber int) (int, error) {
 	value := f.values[f.topIndex(stackNumber)]
 	return value, nil
 }
-
 
 func (f *FixedMultiStack) isEmpty(stackNumber int) bool {
 	return f.sizes[stackNumber] == 0

@@ -1,7 +1,7 @@
 package easy
 
 type NodeDepthFirst struct {
-	Name string
+	Name     string
 	Children []*NodeDepthFirst
 }
 
@@ -12,7 +12,6 @@ func (n *NodeDepthFirst) AddChild(name string) *NodeDepthFirst {
 	})
 	return n
 }
-
 
 func (n *NodeDepthFirst) DepthFirstSearch(array *[]string) *[]string {
 	*array = append(*array, n.Name)

@@ -15,13 +15,12 @@ func TandemBicycle(redSpeeds, blueSpeeds []int, fastest bool) int {
 	total := 0
 	for idx, _ := range redSpeeds {
 		first := redSpeeds[idx]
-		second := blueSpeeds[len(blueSpeeds) - idx - 1]
+		second := blueSpeeds[len(blueSpeeds)-idx-1]
 		total += maxInt(first, second)
 	}
 
 	return total
 }
-
 
 func reverseInPlace(target []int) []int {
 	start := 0
