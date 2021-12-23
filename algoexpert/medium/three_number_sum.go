@@ -6,7 +6,7 @@ func ThreeNumberSum(array []int, target int) [][]int {
 	sort.Ints(array)
 	var results [][]int
 
-	for idx := 0; idx < len(array) - 2; idx++ {
+	for idx := 0; idx < len(array)-2; idx++ {
 		left := idx + 1
 		right := len(array) - 1
 		for left < right {

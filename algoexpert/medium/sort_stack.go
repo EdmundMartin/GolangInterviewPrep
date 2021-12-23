@@ -4,15 +4,13 @@ type SimpleStack struct {
 	Stack []int
 }
 
-
-func NewStack(values... int) *SimpleStack {
+func NewStack(values ...int) *SimpleStack {
 	s := &SimpleStack{Stack: []int{}}
 	for _, val := range values {
 		s.Append(val)
 	}
 	return s
 }
-
 
 func (s *SimpleStack) Pop() int {
 	var x int
@@ -21,7 +19,7 @@ func (s *SimpleStack) Pop() int {
 }
 
 func (s *SimpleStack) Peek() int {
-	return s.Stack[len(s.Stack) - 1]
+	return s.Stack[len(s.Stack)-1]
 }
 
 func (s *SimpleStack) Append(value int) {
@@ -31,7 +29,6 @@ func (s *SimpleStack) Append(value int) {
 func (s *SimpleStack) Length() int {
 	return len(s.Stack)
 }
-
 
 func SortStack(stack *SimpleStack) *SimpleStack {
 	if stack.Length() == 0 {

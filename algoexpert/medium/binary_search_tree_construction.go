@@ -2,14 +2,13 @@ package medium
 
 type BST struct {
 	Value int
-	Left *BST
+	Left  *BST
 	Right *BST
 }
 
 func NewBST(value int) *BST {
 	return &BST{Value: value}
 }
-
 
 func (b *BST) Insert(value int) *BST {
 	currentNode := b
@@ -33,7 +32,6 @@ func (b *BST) Insert(value int) *BST {
 	return b
 }
 
-
 func (b *BST) Contains(value int) bool {
 	currentNode := b
 	for currentNode != nil {
@@ -47,7 +45,6 @@ func (b *BST) Contains(value int) bool {
 	}
 	return false
 }
-
 
 func (b *BST) GetMinValue() int {
 	currentNode := b

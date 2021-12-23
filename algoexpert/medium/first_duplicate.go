@@ -1,6 +1,5 @@
 package medium
 
-
 func minInt(a, b int) int {
 	if a < b {
 		return a
@@ -20,12 +19,11 @@ func FirstDuplicateTwoPointers(array []int) int {
 	}
 
 	if minSecondIdx == len(array) {
-		return  -1
+		return -1
 	}
 
 	return array[minSecondIdx]
 }
-
 
 func FirstDuplicateUsingSet(array []int) int {
 	seen := make(map[int]interface{})

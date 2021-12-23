@@ -12,7 +12,6 @@ func getTestTree() *BinaryTreeNode {
 	return root
 }
 
-
 func TestInvertBinaryTree(t *testing.T) {
 	testTree := getTestTree()
 	InvertBinaryTree(testTree)

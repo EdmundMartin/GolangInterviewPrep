@@ -10,7 +10,6 @@ func TestFirstDuplicateTwoPointers(t *testing.T) {
 	}
 }
 
-
 func TestFirstDuplicateUsingSet(t *testing.T) {
 	result := FirstDuplicateUsingSet([]int{2, 1, 5, 2, 3, 3, 4})
 

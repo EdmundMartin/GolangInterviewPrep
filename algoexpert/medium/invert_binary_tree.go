@@ -1,11 +1,10 @@
 package medium
 
-
 func InvertBinaryTree(tree *BinaryTreeNode) {
 	queue := []*BinaryTreeNode{tree}
 	for len(queue) > 0 {
 		var x *BinaryTreeNode
-		x, queue = queue[len(queue) - 1], queue[:len(queue) - 1]
+		x, queue = queue[len(queue)-1], queue[:len(queue)-1]
 		if x == nil {
 			continue
 		}
@@ -14,7 +13,6 @@ func InvertBinaryTree(tree *BinaryTreeNode) {
 		queue = append(queue, x.Right)
 	}
 }
-
 
 func InvertBinaryTreeRecursive(tree *BinaryTreeNode) {
 	if tree == nil {

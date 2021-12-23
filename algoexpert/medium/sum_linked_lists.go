@@ -1,6 +1,5 @@
 package medium
 
-
 func nodesValue(list *LinkedList) int {
 	if list == nil {
 		return 0
