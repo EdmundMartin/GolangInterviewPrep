@@ -3,14 +3,14 @@ package medium
 import "math"
 
 func MinimumNumberOfCoins(n int, denoms []int) int {
-	numCoins := make([]int, n + 1)
+	numCoins := make([]int, n+1)
 	for i := 1; i < len(numCoins); i++ {
 		numCoins[i] = math.MaxInt32
 	}
 	for _, denom := range denoms {
 		for amount := range numCoins {
 			if denom <= amount {
-				numCoins[amount] = minInt(numCoins[amount], 1 + numCoins[amount - denom])
+				numCoins[amount] = minInt(numCoins[amount], 1+numCoins[amount-denom])
 			}
 		}
 	}
